@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "toastify-js/src/toastify.css";
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: #0f3443;
+}

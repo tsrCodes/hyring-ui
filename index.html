@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drawing App | Hyring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 hidden">
+  <div class="flex flex-col items-center justify-center h-screen">
+    <div class="mt-4 flex space-x-4 items-center justify-between w-[88vw]">
+      <h1 class="text-3xl font-bold mb-4">Drawing App</h1>
+      <div class="flex gap-2 border px-3 py-1 rounded-xl m-2 cursor-pointer hover:-translate-y-1 transition"
+        title="Total Live Users">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class=" ">
+          <g fill="none">
+            <circle cx="9.5" cy="14.5" r="7.5" stroke="currentColor" stroke-width="1.5" />
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M10 16h2" opacity="0.5" />
+            <path fill="currentColor" d="M14 12.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5"
+              opacity="0.5" />
+            <ellipse cx="9" cy="12.5" fill="currentColor" opacity="0.5" rx="1" ry="1.5" />
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m17 7l-2 2" opacity="0.5" />
+            <path stroke="currentColor" stroke-width="1.5"
+              d="M17.981 2.353a.558.558 0 0 1 1.038 0l.654 1.66c.057.143.17.257.315.314l1.659.654c.47.186.47.852 0 1.038l-1.66.654a.56.56 0 0 0-.314.315l-.654 1.659a.558.558 0 0 1-1.038 0l-.654-1.66a.56.56 0 0 0-.315-.314l-1.659-.654a.558.558 0 0 1 0-1.038l1.66-.654a.56.56 0 0 0 .314-.315z" />
+          </g>
+        </svg>
+        <p id="connectionsCount" class="font-bold ">1</p>
+      </div>
+    </div>
+    <canvas id="drawingCanvas" class="border border-gray-300 bg-white"></canvas>
+    <div class="mt-4 flex space-x-4">
+      <button id="resetToDefault" title="Reset to Default Settings"
+        class="bg-teal-500 text-white px-4 py-2 rounded">Reset</button>
+      <input type="color" id="colorPicker"
+        class="p-1 h-10 w-32 rounded block bg-white border border-gray-200 cursor-pointer rounded-lg disabled:opacity-50 disabled:pointer-events-none"
+        value="#0f3443" title="Choose your color">
+      <input id="brushSize" type="range" value="10" min="1" class="w-full bg-gray-200 rounded-lg cursor-pointer">
+      <button id="clearCanvas" title="Clear for Everyone" class="bg-red-500 text-white px-4 py-2 rounded">Clear</button>
+
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
